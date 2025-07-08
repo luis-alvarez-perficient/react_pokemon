@@ -1,0 +1,36 @@
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* font-size: 1.2em; */
+  background-color: red;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid gray;
+  border-radius: 1em;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-nav a {
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.container-header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  /* margin: 0; */
+}
+
+.container-nav-item {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 0.5em 0.5em;
+  margin: 1em;
+}
