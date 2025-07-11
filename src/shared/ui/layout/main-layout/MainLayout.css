@@ -1,3 +1,29 @@
+@media (width <= 200px) {
+  .container-main-layout {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    gap: 1em;
+  }
+
+  .aside-left {
+    display: none;
+  }
+
+  .aside-right {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    border: 1px solid gray;
+    font-size: 1.2em;
+    width: 100%;
+  }
+}
+
 @media (width <= 840px) {
   .container-main-layout {
     display: flex;
@@ -20,6 +46,7 @@
     border-radius: 1em;
     border: 1px solid gray;
     font-size: 1.2em;
+    width: 100%;
   }
 }
 
@@ -55,7 +82,7 @@
   }
 }
 
-@media (width>= 1240px) and (width<= 1800px) {
+@media (width>= 1240px) and (width<= 3000px) {
   .container-main-layout {
     display: flex;
     flex-direction: row;

@@ -1,21 +1,22 @@
-import { UseFetch } from "../../../shared/hooks/hooks";
-import { Pokemon, PokemonResponse } from "../../../shared/types/types";
-import { EmptyCard, ErrorCard, LoaderSpinner } from "../../../shared/ui/ui";
 import { lazy } from "react";
+import UseFetch from "../../../../shared/hooks/UseFetch";
+import { ErrorCard, LoaderSpinner, EmptyCard } from "../../../../shared/ui/ui";
+import { PokemonResponse, SimplePokemon } from "../../../../shared/types/types";
 
 const PokemonList = lazy(() => import("./PokemonList"));
 
 function PokemonListContainer() {
   const { data, loading, error } = UseFetch<PokemonResponse>({
-    url: "https://pokeapi.co/api/v2/pokemon?limit=9&offset=0",
+    url: "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0",
   });
 
   const pokemons = data?.results?.map((pokemon) => {
     const id = pokemon.url.split("/").slice(-2)[0];
+
     return {
       id,
       name: pokemon.name,
-    } as Pokemon;
+    } as SimplePokemon;
   });
 
   return (

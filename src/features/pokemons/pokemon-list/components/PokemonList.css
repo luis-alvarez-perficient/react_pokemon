@@ -5,22 +5,12 @@
   gap: 1.5em;
   padding: 1em;
   border-radius: 1em;
-  /* box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.1); */
-}
-
-.pokemon-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-align: center;
 }
 
 .pokemon-card {
-  /* background-color: white; */
-  /* width: 30vw;
-  height: 30vw; */
   display: flex;
   flex-direction: column;
+  text-align: center;
   border: 0.2rem solid #ddd;
   padding: 1em;
   border-radius: 1.5em;
@@ -29,20 +19,22 @@
 
 .pokemon-card:hover {
   transform: scale(1.06);
-  transition: transform 0.6s;
+  /* backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.6s; */
   box-shadow: 0 0.8em 0.8em rgba(0, 0, 0, 0.3);
+}
+.pokemon-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .pokemon-image {
-  /* background-color: red; */
   width: 200px;
   height: 200px;
-  /* min-width: 10vw;
-  min-height: 10vw;
-  max-width: 100%;
-  max-height: 100%; */
-  /* width: 15vw;
-  height: 15vw; */
   object-fit: scale-down;
 }
 
@@ -63,4 +55,21 @@
 
 .image-placeholder p {
   color: black;
+}
+
+.pokemon-button-detail {
+  background-color: red;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 0.1rem solid gray;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.pokemon-button-detail:hover {
+  background-color: darkred;
 }

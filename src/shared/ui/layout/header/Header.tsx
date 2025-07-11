@@ -4,17 +4,25 @@ import "./Header.css";
 function Header() {
   return (
     <header className="container-header">
-      {/* <h1 className="header-title">Header</h1> */}
-      {/* <link rel="icon" type="image/svg+xml" href="/pokeball.svg" /> */}
-      <img
-        className="header-logo"
-        src="/pokeball.svg"
-        alt="Logo"
-        width={"100px"}
-        height={"100px"}
-      />
+      <div className="header-logos">
+        <img
+          className="logo-pokeball"
+          src="/pokeball.svg"
+          alt="Logo Pokeball"
+          width={"100px"}
+          height={"100px"}
+        />
 
-      <nav className="header-nav">
+        <img
+          className="logo-pokemon"
+          src="/pokemon-logo.svg"
+          alt="Logo Pokemon"
+          width={"200px"}
+          height={"100px"}
+        />
+      </div>
+
+      <nav className="container-header-nav">
         <div className="container-nav-item">
           <Link to="/" className="nav-link">
             Inicio
@@ -23,11 +31,6 @@ function Header() {
         <div className="container-nav-item">
           <Link to="/users" className="nav-link">
             Logout
-          </Link>
-        </div>
-        <div className="container-nav-item">
-          <Link to="/pokemon-detail" className="nav-link">
-            Pokemon Detail
           </Link>
         </div>
       </nav>

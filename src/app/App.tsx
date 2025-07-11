@@ -1,19 +1,20 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeContext, themes } from "../shared/context/ThemeContext";
-import PokemonListContainer from "../features/pokemons/pokemon-list/PokemonListContainer";
-import MainLayout from "../shared/ui/layout/main-layout/MainLayout";
-import Header from "../shared/ui/layout/header/Header";
-import Sidenav from "../shared/ui/layout/sidenav/Sidenav";
+import AppRouter from "./router/AppRouter";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <ThemeContext.Provider value={themes.light}>
-      <MainLayout
-        header={<Header />}
-        sidenav={<Sidenav />}
-        body={<PokemonListContainer />}
-      />
-    </ThemeContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeContext.Provider value={themes.light}>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </ThemeContext.Provider>
+    </QueryClientProvider>
   );
 }
 

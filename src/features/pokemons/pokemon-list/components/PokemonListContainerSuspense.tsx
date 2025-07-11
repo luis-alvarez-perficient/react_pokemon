@@ -1,7 +1,7 @@
-import { PokemonResponse } from "../../../shared/types/types";
-import { LoaderSpinner } from "../../../shared/ui/ui";
-import UseFetchSuspense from "../../../shared/hooks/UseFetchSuspense";
 import { lazy, Suspense } from "react";
+import { LoaderSpinner } from "../../../../shared/ui/ui";
+import UseFetchSuspense from "../../../../shared/hooks/UseFetchSuspense";
+import { PokemonResponse } from "../../../../shared/types/pokemons/PokemonsResponse";
 
 const PokemonList = lazy(() => import("./PokemonList"));
 

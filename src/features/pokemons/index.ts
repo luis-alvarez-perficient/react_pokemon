@@ -1,4 +1,3 @@
-export * from './other-component/FetchDataPokemons';
-export * from './pages/PokemonDetail';
-export * from './pokemon-list/PokemonList';
-export * from './pokemon-list/PokemonListContainer';
+export { default as PokemonDetailPage } from "./pokemon-detail/pages/PokemonDetailPage";
+export * from "./pokemon-list/components/PokemonCard";
+export * from "./pokemon-list/components/PokemonList";
